@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+  <title>Ufot</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.0/d3.min.js"></script>
+</head>
+<style>
+
+body {
+  background-color: black;
+  font-family: "Space Mono", sans-serif;
+  width: 535px;
+}
+
+
+.rotation {
+  color: white;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 3px 3px 3px 3px;
+  text-align: center;
+  float: left;
+
+}
+
+.rotation.right {
+  margin-left: 220px;
+}
+
+
+
+
+.rotation text {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#topbar {
+  float: left;
+
+}
+
+.axisCircles {
+  fill: none;
+  stroke: white;
+  stroke-width: 0.5px;
+}
+
+.svg {
+  display: block;
+}
+
+.year {
+  color: white;
+  font-size: 20px;
+  pointer-events: none;
+
+}
+
+.circle {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: white;
+      color: black;
+      text-align: center;
+      line-height: 45px;
+      pointer-events: none;
+      -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+
+.circle span {
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+</style>
+<body>
+      <div class="year">Vuonna <strong>2016</strong> tehtiin <strong>40</strong> ufohavaintoa</div>
+      <script src="script/radial.js"></script>
+      <div class = "rotation right"><div class = "circle"><span><</span></div><text class = "righttext">1970</text></div>
+      <div class = "rotation left"><div class = "circle"><span>></span></div><text class = "lefttext">2015</text></div>
+
+
+</body>
