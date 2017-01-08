@@ -293,7 +293,17 @@
                 'width': 300,
                 'height': 300,
                 'change' : function (v) {
-                  },
+                  if (wheelValue > v) {
+                    wheelValue = v
+                    $(".dial").attr("value", function () { return v; })
+                    switcher = false,
+                    rotateBar()
+                  } else {
+                    wheelValue = v
+                    $(".dial").attr("value", function () { return v; })
+                    switcher = true,
+                    rotateBar()
+                  }},
                 'release' : function (v) {
                   if (wheelValue > v) {
                     wheelValue = v
