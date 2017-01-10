@@ -318,11 +318,11 @@
                 var lastY;
                 $('svg').bind('touchmove', function (e){
                      var currentY = e.originalEvent.touches[0].clientY;
-                     if(currentY > lastY){
+                     if(currentY > lastY + 10){
                          // moved down
                          witcher = true;
                          window.setTimeout(rotationFunction(), 1000)
-                     }else if(currentY < lastY){
+                     }else if(currentY < lastY - 10){
                          // moved up
                          switcher = false;
                          window.setTimeout(rotationFunction(), 1000)
