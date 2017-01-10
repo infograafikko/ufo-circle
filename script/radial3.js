@@ -321,11 +321,11 @@
                      if(currentY > lastY  + 2){
                          // moved down
                          switcher = true;
-                         window.setTimeout(rotationFunction(), 1000)
+                         window.setTimeout(rotationFunction(), 200)
                      }else if(currentY < lastY - 2){
                          // moved up
                          switcher = false;
-                         window.setTimeout(rotationFunction(), 1000)
+                         window.setTimeout(rotationFunction(), 200)
                      }
                      lastY = currentY;
                 });
