@@ -321,12 +321,11 @@
                      if(currentY > lastY){
                          // moved down
                          witcher = true;
-                         rotationFunction()
-                         setTimeout(0,1000)
+                         window.setTimeout(rotationFunction(), 1000)
                      }else if(currentY < lastY){
                          // moved up
                          switcher = false;
-                         setTimeout(rotationFunction(), 1000)
+                         window.setTimeout(rotationFunction(), 1000)
                      }
                      lastY = currentY;
                 });
