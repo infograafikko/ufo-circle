@@ -315,19 +315,19 @@
                 return false;
                 });
 
-                var lastX;
-                $('#rotation').bind('touchmove', function (e){
-                     var currentX = e.originalEvent.touches[0].clientX;
-                     if(currentX > lastX){
-                         // moved right
+                var lastY;
+                $('svg').bind('touchmove', function (e){
+                     var currentY = e.originalEvent.touches[0].clientY;
+                     if(currentY > lastY + 0.5){
+                         // moved down
                          switcher = true;
                          window.setTimeout(rotationFunction(), 250)
-                     }else if(currentX < lastX ){
+                     }else if(currentY < lastY - 0.5 ){
                          // moved up
                          switcher = false;
                          window.setTimeout(rotationFunction(), 250)
                      }
-                     lastX = currentX;
+                     lastY = currentY;
                 });
 
 }
