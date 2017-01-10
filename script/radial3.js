@@ -316,7 +316,7 @@
                 });
 
                 var lastX;
-                $('.rotation').bind('touchmove', function (e){
+                $('.rotation left').bind('touchmove', function (e){
                      var currentX = e.originalEvent.touches[0].clientX;
                      if(currentX > lastX){
                          // moved right
