@@ -315,6 +315,21 @@
                 return false;
                 });
 
+                var lastY;
+                $('svg').bind('touchmove', function (e){
+                     var currentY = e.originalEvent.touches[0].clientY;
+                     if(currentY > lastY){
+                         // moved down
+                         witcher = true;
+                         rotationFunction()
+                     }else if(currentY < lastY){
+                         // moved up
+                         switcher = false;
+                         rotationFunction()
+                     }
+                     lastY = currentY;
+                });
+
 }
 
 document.ontouchmove = function(e){
